@@ -11,7 +11,7 @@
 #include "KTools/Kff/fixedtypes.h"
 #include "KTools/Kff/variabletypes.h"
 */
-#include <libKTools>
+//#include <libKTools>
 
 int main(int argc, char *argv[])
 {
