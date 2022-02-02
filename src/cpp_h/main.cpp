@@ -11,7 +11,8 @@
 #include "KTools/Kff/fixedtypes.h"
 #include "KTools/Kff/variabletypes.h"
 */
-//#include <libKTools>
+
+#include "KTools/src/cpp_h/options.h"
 
 int main(int argc, char *argv[])
 {
@@ -29,10 +30,10 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
 
-    KTools::Kff::registerTypesForQml();
+    //KTools::Kff::registerTypesForQml();
 
     static KTools::Options *options = new KTools::Options();
-    FsHandler *fsExplorerHandle = new FsHandler();
+    /*FsHandler *fsExplorerHandle = new FsHandler();
     KTools::Kff::MetainfoFs db(options);
     ImageStorage::Interface imageStorage(&db);
 
@@ -44,11 +45,11 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("imageStorage", &imageStorage);
     engine.load(url);
 
-    testFunction();
+    testFunction();*/
 
     return app.exec();
 }
 
 
-Q_DECLARE_METATYPE(KTools::Kff::NameInfo)
-Q_DECLARE_METATYPE(KTools::Kff::NameInfoList)
+//_DECLARE_METATYPE(KTools::Kff::NameInfo)
+//Q_DECLARE_METATYPE(KTools::Kff::NameInfoList)
