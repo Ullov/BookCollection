@@ -9,7 +9,8 @@ CONFIG += c++17 object_parallel_to_source
 SOURCES += \
     cpp_h/main.cpp
 
-RESOURCES += qml.qrc
+RESOURCES += qml.qrc \
+    KTools/src/resource.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =

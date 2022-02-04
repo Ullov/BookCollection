@@ -3,16 +3,9 @@
 #include <QQmlContext>
 #include <QUuid>
 #include <QQmlEngine>
-/*#include "KTools/uuidslist.h"
-#include "KTools/options.h"
-#include "KTools/Kff/metainfofs.h"
-#include "KTools/Kff/manager.h"
-#include "KTools/Kff/rawstream.h"
-#include "KTools/Kff/fixedtypes.h"
-#include "KTools/Kff/variabletypes.h"
-*/
 
 #include "KTools/src/cpp_h/options.h"
+#include "KTools/src/cpp_h/uuidslist.h"
 
 int main(int argc, char *argv[])
 {
@@ -32,20 +25,15 @@ int main(int argc, char *argv[])
 
     //KTools::Kff::registerTypesForQml();
 
-    static KTools::Options *options = new KTools::Options();
-    /*FsHandler *fsExplorerHandle = new FsHandler();
-    KTools::Kff::MetainfoFs db(options);
-    ImageStorage::Interface imageStorage(&db);
+    //static KTools::Options *options = new KTools::Options();
+
+    //KTools::Kff::MetainfoFs db(options);
 
     UuidsList::ids.init(&UuidsList::ids);
     UuidsList::ids.createItems(20);
 
     engine.rootContext()->setContextProperty("uuidsList", &UuidsList::ids);
-    engine.rootContext()->setContextProperty("fsExplorerHandle", fsExplorerHandle);
-    engine.rootContext()->setContextProperty("imageStorage", &imageStorage);
     engine.load(url);
-
-    testFunction();*/
 
     return app.exec();
 }
