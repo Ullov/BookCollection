@@ -12,35 +12,7 @@ Window {
     color: "Gray"
     visibility: "Maximized"
 
-    SearchSelectors {}
+    SearchWindow {
+
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
