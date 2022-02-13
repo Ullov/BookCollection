@@ -7,7 +7,11 @@ QT += quick
 CONFIG += c++17 object_parallel_to_source
 
 SOURCES += \
-    cpp_h/main.cpp
+    cpp_h/main.cpp \
+    cpp_h/searchclient.cpp
+
+HEADERS += \
+    cpp_h/searchclient.h
 
 RESOURCES += qml.qrc \
     KTools/src/resource.qrc
@@ -27,5 +31,8 @@ win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/KTools/src/release/ -l
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/KTools/src/debug/ -lKTools
 else:unix: LIBS += -L$$OUT_PWD/KTools/src/ -lKTools
 
+LIBS += -lcurl
+
 INCLUDEPATH += $$PWD/KTools/src/cpp_h
 DEPENDPATH += $$PWD/KTools/src/cpp_h
+

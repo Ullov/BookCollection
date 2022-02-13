@@ -4,8 +4,10 @@
 #include <QUuid>
 #include <QQmlEngine>
 
+#include <curl/curl.h>
 #include "KTools/src/cpp_h/options.h"
 #include "KTools/src/cpp_h/uuidslist.h"
+#include "searchclient.h"
 
 int main(int argc, char *argv[])
 {
@@ -23,9 +25,13 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
 
+    curl_global_init(CURL_GLOBAL_ALL);
+    static KTools::Options *options = new KTools::Options();
+    SearchClient sc;
+    sc.init();
+
     //KTools::Kff::registerTypesForQml();
 
-    //static KTools::Options *options = new KTools::Options();
 
     //KTools::Kff::MetainfoFs db(options);
 
